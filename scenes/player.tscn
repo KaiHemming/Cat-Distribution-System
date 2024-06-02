@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlquxnjfxsu7t"]
+
+[ext_resource type="Script" path="res://scripts/player.cs" id="1_ssoiy"]
+[ext_resource type="PackedScene" uid="uid://b2cw02t5tpirb" path="res://scenes/hud.tscn" id="3_r0ddm"]
+[ext_resource type="PackedScene" uid="uid://dbrywoi7taeru" path="res://scenes/cat.tscn" id="3_u6fi5"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_ssoiy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HUD" parent="Camera2D" instance=ExtResource("3_r0ddm")]
+
+[node name="Cat" parent="." instance=ExtResource("3_u6fi5")]
